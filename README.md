@@ -35,14 +35,32 @@ limitations under the License.
 
 > Compute the L2-norm of a complex double-precision floating-point vector.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-dznrm2
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import dznrm2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@esm/index.mjs';
+var dznrm2 = require( '@stdlib/blas-base-dznrm2' );
 ```
 
 #### dznrm2( N, x, strideX )
@@ -50,7 +68,7 @@ import dznrm2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@esm/i
 Computes the L2-norm of a complex double-precision floating-point vector.
 
 ```javascript
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
+var Complex128Array = require( '@stdlib/array-complex128' );
 
 var x = new Complex128Array( [ 0.3, 0.1, 0.5, 0.0, 0.0, 0.5, 0.0, 0.2 ] );
 
@@ -67,7 +85,7 @@ The function has the following parameters:
 The `N` and stride parameters determine which elements in the strided array are accessed at runtime. For example, to traverse every other value,
 
 ```javascript
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
+var Complex128Array = require( '@stdlib/array-complex128' );
 
 var x = new Complex128Array( [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0, -1.0, -3.0 ] );
 
@@ -78,7 +96,7 @@ var norm = dznrm2( 2, x, 2 );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
+var Complex128Array = require( '@stdlib/array-complex128' );
 
 // Initial array:
 var x0 = new Complex128Array( [ 1.0, -2.0, 3.0, -4.0, 5.0, -6.0 ] );
@@ -96,7 +114,7 @@ var norm = dznrm2( 2, x1, 1 );
 Computes the L2-norm of a complex double-precision floating-point vector using alternative indexing semantics.
 
 ```javascript
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
+var Complex128Array = require( '@stdlib/array-complex128' );
 
 var x = new Complex128Array( [ 0.3, 0.1, 0.5, 0.0, 0.0, 0.5, 0.0, 0.2 ] );
 
@@ -111,7 +129,7 @@ The function has the following additional parameters:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the `offset` parameter supports indexing semantics based on a starting index. For example, to start from the second index,
 
 ```javascript
-import Complex128Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex128@esm/index.mjs';
+var Complex128Array = require( '@stdlib/array-complex128' );
 
 var x = new Complex128Array( [ 1.0, -2.0, 3.0, -4.0, 5.0, -6.0 ] );
 
@@ -140,16 +158,11 @@ var norm = dznrm2.ndarray( 2, x, 1, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
-import dznrm2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
+var dznrm2 = require( '@stdlib/blas-base-dznrm2' );
 
 function rand() {
     return new Complex128( discreteUniform( 0, 10 ), discreteUniform( -5, 5 ) );
@@ -161,10 +174,6 @@ console.log( x.toString() );
 // Computes the L2-norm:
 var norm = dznrm2( x.length, x, 1 );
 console.log( norm );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -173,7 +182,126 @@ console.log( norm );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/blas/base/dznrm2.h"
+```
+
+#### c_dznrm2( N, \*X, strideX )
+
+Computes the L2-norm of a complex double-precision floating-point vector.
+
+```c
+const double X[] = { 0.3, 0.1, 0.5, 0.0, 0.0, 0.5, 0.0, 0.2 };
+
+double norm = c_dznrm2( 4, (void *)X, 1 );
+// returns 0.8
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] CBLAS_INT` number of indexed elements.
+-   **X**: `[in] void*` input array.
+-   **strideX**: `[in] CBLAS_INT` index increment for `X`.
+
+```c
+double c_dznrm2( const CBLAS_INT N, const void *X, const CBLAS_INT strideX );
+```
+
+#### c_dznrm2_ndarray( N, \*X, strideX, offsetX )
+
+Computes the L2-norm of a complex double-precision floating-point vector using alternative indexing semantics.
+
+```c
+const double X[] = { 0.3, 0.1, 0.5, 0.0, 0.0, 0.5, 0.0, 0.2 };
+
+double norm = c_dznrm2_ndarray( 4, (void *)X, 1, 0 );
+// returns 0.8
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] CBLAS_INT` number of indexed elements.
+-   **X**: `[in] void*` input array.
+-   **strideX**: `[in] CBLAS_INT` index increment for `X`.
+-   **offsetX**: `[in] CBLAS_INT` starting index for `X`.
+
+```c
+double c_dznrm2_ndarray( const CBLAS_INT N, const void *X, const CBLAS_INT strideX, const CBLAS_INT offsetX );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/blas/base/dznrm2.h"
+#include <stdio.h>
+
+int main( void ) {
+    // Create a strided array of interleaved real and imaginary components:
+    const double X[] = { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0 };
+
+    // Specify the number of elements:
+    const int N = 4;
+
+    // Specify stride length:
+    const int strideX = 1;
+
+    // Compute the L2-norm:
+    double norm = c_dznrm2( N, (void *)X, strideX );
+
+    // Print the result:
+    printf( "L2-norm: %lf\n", norm );
+
+    // Compute the L2-norm using alternative indexing semantics:
+    norm = c_dznrm2_ndarray( N, (void *)X, -strideX, N-1 );
+
+    // Print the result:
+    printf( "L2-norm: %lf\n", norm );
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -192,7 +320,7 @@ console.log( norm );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -259,7 +387,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [dznrm2]: https://netlib.org/lapack/explore-html//d1/d2a/group__nrm2_ga7f9f9febc6dc1836c9f5e7c1aa00b743.html
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/esm
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
