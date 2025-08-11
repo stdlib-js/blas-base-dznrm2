@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-07)
+## Unreleased (2025-08-11)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`11f3cfa`](https://github.com/stdlib-js/stdlib/commit/11f3cfa5a658d7cb105aeb2578b7d72ea62f1e97) - **refactor:** update include header guards for double precision real packages [(#7711)](https://github.com/stdlib-js/stdlib/pull/7711) _(by Shabareesh Shetty)_
 -   [`09c9ceb`](https://github.com/stdlib-js/stdlib/commit/09c9ceb58c6dd23c10f1980094851983c57d693f) - **chore:** fix formatting _(by Athan Reines)_
 -   [`51bf6f9`](https://github.com/stdlib-js/stdlib/commit/51bf6f9d2bb027aacecda87e02f957badbc246b0) - **bench:** fix formatting _(by Athan Reines)_
 -   [`4b2abf0`](https://github.com/stdlib-js/stdlib/commit/4b2abf00490c06b2627ae5f75968a9a4c005d166) - **docs:** change variable naming for `blas/base/dznrm2` [(#7174)](https://github.com/stdlib-js/stdlib/pull/7174) _(by Shabareesh Shetty, Athan Reines)_
