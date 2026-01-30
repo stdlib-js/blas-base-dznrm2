@@ -44,6 +44,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+dznrm2 = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-dznrm2/tags). For example,
+
+```javascript
 dznrm2 = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@v0.2.0-umd/browser.js' )
 ```
 
@@ -56,7 +61,7 @@ var dznrm2 = require( 'path/to/vendor/umd/blas-base-dznrm2/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -171,7 +176,7 @@ var norm = dznrm2.ndarray( 2, x, 1, 1 );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@v0.2.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
