@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dznrm2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@deno/mod.js';
+import dznrm2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@v0.2.1-deno/mod.js';
 ```
 
 #### dznrm2( N, x, strideX )
@@ -144,7 +144,7 @@ var norm = dznrm2.ndarray( 2, x, 1, 1 );
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@deno/mod.js';
-import dznrm2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@deno/mod.js';
+import dznrm2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dznrm2@v0.2.1-deno/mod.js';
 
 function rand() {
     return new Complex128( discreteUniform( 0, 10 ), discreteUniform( -5, 5 ) );
