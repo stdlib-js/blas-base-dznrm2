@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-13)
+## Unreleased (2026-10-24)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`913219c`](https://github.com/stdlib-js/stdlib/commit/913219c609192b1fea2936b6f46291163518a71e) - **test:** migrate `blas/base/dznrm2` to ULP-based assertions [(#16272)](https://github.com/stdlib-js/stdlib/pull/16272) _(by Athan Reines)_
 -   [`3208321`](https://github.com/stdlib-js/stdlib/commit/320832192c8d32b18d24c7342ba1cf03cc5affea) - **bench:** refactor to use dynamic memory allocation [(#14099)](https://github.com/stdlib-js/stdlib/pull/14099) _(by Philipp Burckhardt, Athan Reines)_
 -   [`b0713ea`](https://github.com/stdlib-js/stdlib/commit/b0713eab38c54a2e13a01a17df978df42dee4579) - **docs:** update descriptions to be consistent with elsewhere in project _(by Athan Reines)_
 -   [`f9d1409`](https://github.com/stdlib-js/stdlib/commit/f9d140985e169d34f4e66bd770dc675ea28588a3) - **docs:** add missing JSDoc comment _(by Athan Reines)_
